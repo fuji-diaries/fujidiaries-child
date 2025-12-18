@@ -114,6 +114,11 @@ body.home .entry-content.alignfull{
   padding:0 1.5rem;
   overflow:hidden;
 }
+body.admin-bar .hero {
+  min-height: calc(100svh - var(--wp-admin--admin-bar--height, 32px));
+}
+
+
 
 /* 背景動画（全体をカバー） */
 .hero-video{
