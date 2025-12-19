@@ -478,5 +478,59 @@ body.page-id-134 .wp-block-navigation-item [aria-current="page"] {
 
 .fd-nav a:hover{ opacity: 1; }
 
-/* ヒーローがヘッダーに隠れないように */
-body{ padding-top: 78px; }
+/* ====================================
+   Header Overlay (Home only)
+==================================== */
+
+/* Header overlay (Heroに溶ける固定バー) */
+.fd-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.fd-header .wp-block-group {
+  background: rgba(40, 45, 50, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+.fd-header .fd-header__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 24px;
+}
+
+/* Homeだけ調整 */
+body.home .fd-main {
+  padding-top: 64px;
+}
+
+/* 管理バー補正 */
+body.admin-bar.home .fd-header {
+  top: var(--wp-admin--admin-bar--height, 32px);
+}
+body.admin-bar.home .fd-main {
+  padding-top: calc(64px + var(--wp-admin--admin-bar--height, 32px));
+}
+
+.hero{
+  position:relative;
+  min-height:100svh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  overflow:hidden;
+}
+.hero-video{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
