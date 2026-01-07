@@ -605,4 +605,121 @@ header.wp-block-template-part.fd-header{
    99. Overrides (SAFE ZONE)
    ここから下だけ触る。上は原則いじらない。
 ================================================== */
+/* ===============================
+   PATCH ZONE: Header Right Nav
+================================ */
+
+.fd-header__right {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.fd-nav {
+  display: flex;
+  gap: 18px;
+}
+
+.fd-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  opacity: .9;
+}
+
+.fd-nav a:hover {
+  opacity: 1;
+}
+
+.fd-lang {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+}
+
+.fd-lang__link {
+  color: #fff;
+  text-decoration: none;
+  opacity: .7;
+}
+
+.fd-lang__link.is-active {
+  opacity: 1;
+}
+
+.fd-lang__sep {
+  margin: 0 6px;
+  opacity: .5;
+}
+/* =========================
+   Header
+========================= */
+
+.fd-header {
+  background: rgba(60, 65, 70, 0.85);
+  color: #fff;
+}
+
+.fd-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+}
+
+.fd-header__brand,
+.fd-header__title {
+  pointer-events: none;
+  cursor: default;
+}
+
+.fd-header__right{
+  display: flex;
+  align-items: center;
+  gap: 22px; /* navだけなら 16〜22px で良い */
+}
+
+/* Nav */
+.fd-nav a{
+  color: #fff !important;
+  text-decoration: none;
+  letter-spacing: .06em;
+  font-size: 12px;
+  text-transform: uppercase;
+  opacity: .9;
+}
+.fd-nav a:hover{ opacity: 1; }
+
+
+/* =========================
+   Header Overlay (Home only)
+========================= */
+
+.fd-header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.fd-header .wp-block-group{
+  background: rgba(40, 45, 50, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+/* 余白系（あなたの現状に合わせて維持） */
+body.home .fd-main{
+  padding-top: 64px;
+}
+body.admin-bar.home .fd-header{
+  top: var(--wp-admin--admin-bar--height, 32px);
+}
+body.admin-bar.home .fd-main{
+  padding-top: calc(64px + var(--wp-admin--admin-bar--height, 32px));
+}
 
