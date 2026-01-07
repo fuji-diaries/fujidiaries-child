@@ -723,3 +723,20 @@ body.admin-bar.home .fd-main{
   padding-top: calc(64px + var(--wp-admin--admin-bar--height, 32px));
 }
 
+/* ================================
+   Header Nav – spacing & typography
+   ================================ */
+
+.fd-header__right .fd-nav{
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.fd-header__right .fd-nav a{
+  font-size: 14.5px;
+  letter-spacing: 0.08em;
+  line-height: 1;
+}
+
+
