@@ -533,4 +533,76 @@ body.admin-bar.home .fd-main {
   height:100%;
   object-fit:cover;
 }
+/* =========================
+   Header
+========================= */
+
+.fd-header {
+  background: rgba(60, 65, 70, 0.85);
+  color: #fff;
+}
+
+.fd-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+}
+
+.fd-header__title {
+  pointer-events: none;
+  cursor: default;
+}
+.fd-header__brand,
+.fd-header__brand * {
+  pointer-events: none;
+  cursor: default;
+}
+/* Brand: “置物化” (interaction + link look off) */
+.fd-header__brand,
+.fd-header__brand * {
+  pointer-events: none;
+  cursor: default;
+}
+
+.fd-header__brand a.fd-header__title {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+.fd-header__brand a.fd-header__title:hover,
+.fd-header__brand a.fd-header__title:focus,
+.fd-header__brand a.fd-header__title:visited,
+.fd-header__brand a.fd-header__title:active {
+  text-decoration: none !important;
+  color: inherit !important;
+  outline: none;
+}
+
+.fd-header .fd-header__inner{
+  max-width: none;
+  width: 100%;
+}
+.fd-header.wp-block-group.alignfull{
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* 方式Aの保険：外側ラッパーを箱として無効化 */
+header.wp-block-template-part.fd-header{
+  display: contents;
+}
+
+/* ブランドは完全に非インタラクティブ */
+.fd-header__title{
+  pointer-events: none;
+  cursor: default;
+}
+
+/* ==================================================
+   99. Overrides (SAFE ZONE)
+   ここから下だけ触る。上は原則いじらない。
+================================================== */
 
